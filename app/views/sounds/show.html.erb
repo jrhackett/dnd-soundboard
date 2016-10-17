@@ -2,22 +2,28 @@
 
 	<p id="notice"><%= notice %></p>
 
-	<p>
+	<p class = "title">
 	  <strong>Name:</strong>
 	  <%= @sound.name %>
 	</p>
 
-	<p>
+	<p class = "title">
 	  <strong>Sound Attachment:</strong>
 	  <%= @sound.soundAttachment %>
 	</p>
+	<audio controls>
+      <source src = "<%= @sound.soundAttachment.url %>" type = "audio/mp3">
+	</audio>
 
-	<p>
+	<p class = "title">
 	  <strong>Image Attachment:</strong>
 	  <%= @sound.imageAttachment %>
 	</p>
 
-	<%= link_to 'Edit', edit_sound_path(@sound) %> |
-	<%= link_to 'Back', sounds_path %>
+	<img class = "sound-show-picture" src = "<%= @sound.imageAttachment%>"/>
+	<p>
+	  <%= link_to 'Edit', edit_sound_path(@sound) %> |
+	  <%= link_to 'Back', sounds_path %>
+	</p>
 
 </div>
