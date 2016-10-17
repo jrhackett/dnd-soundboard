@@ -69,6 +69,6 @@ class SoundsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def sound_params
-      params.require(:sound).permit(:name, :file, :picture)
+      params.require(:sound).permit(:name, :file, :picture, :soundAttachment, :imageAttachment)
     end
 end

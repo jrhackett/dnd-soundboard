@@ -1,19 +1,28 @@
-<p id="notice"><%= notice %></p>
+<div class = "container new-sound">
 
-<p>
-  <strong>Name:</strong>
-  <%= @sound.name %>
-</p>
+	<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>File:</strong>
-  <%= @sound.file %>
-</p>
+	<p>
+	  <strong>Name:</strong>
+	  <%= @sound.name %>
+	</p>
 
-<p>
-  <strong>Picture:</strong>
-  <%= @sound.picture %>
-</p>
+	<p>
+	  <strong>File:</strong>
+	  <%= @sound.file %>
+	</p>
 
-<%= link_to 'Edit', edit_sound_path(@sound) %> |
-<%= link_to 'Back', sounds_path %>
+	<p>
+	  <strong>Picture:</strong>
+	  <%= @sound.picture %>
+	</p>
+
+	<p>
+	  <strong>Sound Attachment:</strong>
+	  <%= @sound.soundAttachment %>
+	</p>
+
+	<%= link_to 'Edit', edit_sound_path(@sound) %> |
+	<%= link_to 'Back', sounds_path %>
+
+</div>

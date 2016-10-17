@@ -9,7 +9,6 @@
 (($) ->
 	@handleAudioImageClick = (name) ->
 		audiostr = "#" + name + "-audio"
-		console.log(audiostr)
 		audio = $(audiostr)[0];
 		if audio.paused
 			audio.play()
