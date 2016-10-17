@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sounds</h1>
+
+<div class = "container">
+  <div class = "row">
+    <% @sounds.each do |sound| %>
+      <div class = "col-lg-3 col-md-3 col-sm-3 col-xs-3">
+        <h3><%= sound.name %></h3>
+        <div class = "sound-picture" style = "background-image: url('<%= image_url sound.picture %>');"></div>
+        <p class = "sound-control"><%= link_to 'Show', sound %></p>
+        <p class = "sound-control"><%= link_to 'Edit', edit_sound_path(sound) %></p>
+        <p class = "sound-control"><%= link_to 'Destroy', sound, method: :delete, data: { confirm: 'Are you sure?' } %></p>
+        <p><%= sound.file %></p>
+      </div>
+    <% end %>
+  </div>
+</div>
+
+<%= link_to 'New Sound', new_sound_path %>
