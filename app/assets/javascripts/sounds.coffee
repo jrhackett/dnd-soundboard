@@ -16,3 +16,9 @@
 		else
 			audio.pause()
 ) jQuery
+
+# TODO figure out why adding this stopPropagation call is causing the delete action to go to the show action instead
+# (($) ->
+# 	$ -> $(".sound-picture .sound-control").on "click", (e) ->
+# 		e.stopPropagation()
+# ) jQuery

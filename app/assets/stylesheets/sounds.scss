@@ -7,9 +7,44 @@
 	width: 100%;
 	background-size: cover;
 	background-position: 50% 50%;
+	text-align: center;
+
+	.destroy {
+		position: absolute;
+		top: 25px;
+		right: 25px;
+		color: white;
+		font-size: 20px;
+
+		&:hover, &:active, &:focus {
+			text-decoration: none;
+			color: #ccc;
+			background-color: transparent;
+		}
+	}
 }
 
 .sound-control {
 	display: inline;
 	margin: 0 15px 15px 15px;
+}
+
+.sound-name {
+	color: white;
+	position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.field label {
+	color: white;
+}
+
+.new-sound a {
+	color: white;
+	&:hover, &:active, &:focus {
+		text-decoration: none;
+		color: #ccc;
+		background-color: transparent;
+	}
 }
