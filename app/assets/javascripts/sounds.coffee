@@ -3,5 +3,16 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 (($) ->
-  $ ->	$(".sound-picture").height($(".sound-picture").width());
+  $ ->	$(".sound-picture").height($(".sound-picture").width())
+) jQuery
+
+(($) ->
+	@handleAudioImageClick = (name) ->
+		audiostr = "#" + name + "-audio"
+		console.log(audiostr)
+		audio = $(audiostr)[0];
+		if audio.paused
+			audio.play()
+		else
+			audio.pause()
 ) jQuery
