@@ -23,8 +23,13 @@
  .navbar {
  	border-radius: 0;
  	border: 0;
+ 	background-color: rgba(0, 0, 0, 0.4);
  }
 
  .title {
  	color: white;
+ }
+
+ .main-content {
+ 	margin-bottom: 33px;
  }
