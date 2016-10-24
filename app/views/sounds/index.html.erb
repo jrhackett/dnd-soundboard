@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <% @sounds.each do |sound| %>
-  <div class = "col-lg-4 col-md-4 col-sm-6 col-xs-12 sound-card-container">
+  <div class = "col-lg-3 col-md-4 col-sm-6 col-xs-12 sound-card-container">
     <div class = "sound-card">
       <div class = "sound-picture" style = "background-image: url('<%= sound.imageAttachment.url %>');" onClick="handleAudioImageClick('<%= sound.id %>')">
         <!-- <h3 class = "sound-name"><%= sound.name %></h3>
@@ -14,7 +14,7 @@
         <audio loop id = "<%= sound.id %>-audio">
           <source src = "<%= sound.soundAttachment.url %>" type = "audio/mp3">
         </audio>
-        <i class="fa fa-play" id = "sound-play-pause-<%= sound.id %>" aria-hidden="true"></i>
+        <i class="fa fa-play" id = "sound-play-pause-<%= sound.id %>" onClick="handleAudioImageClick('<%= sound.id %>')" aria-hidden="true"></i>
       </div>
       <!-- <p><%= link_to "Download sound file", sound.soundAttachment.url %></p>
       <p><%= link_to "Download image file", sound.imageAttachment.url %></p> -->
