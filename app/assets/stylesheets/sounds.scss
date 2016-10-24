@@ -2,42 +2,43 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-
-.sound-picture {
-	width: 100%;
-	background-size: cover;
-	background-position: 50% 50%;
-	text-align: center;
-
-	.destroy {
-		position: absolute;
-		top: 25px;
-		right: 25px;
-		color: white;
+@media (min-width: 1200px) {
+	h3 {
 		font-size: 20px;
-
-		&:hover, &:active, &:focus {
-			text-decoration: none;
-			color: #ccc;
-			background-color: transparent;
-		}
 	}
 }
 
-.sound-control {
-	display: inline;
-	margin: 0 15px 15px 15px;
-}
+.sound-card-container {
+	margin-bottom: 30px;
 
-.sound-name {
-	color: white;
-	position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-}
+	.sound-card {
+		background-color: white;
+		padding: 0;
+		transition: box-shadow .25s;
+		box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);
+		border-radius: 2px;
+	  
+		&:hover {
+			box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+		}
 
-.field label {
-	color: white;
+		.sound-picture {
+			width: 100%;
+			height: auto;
+			border-radius: 2px 2px 0 0;
+			background-size: cover;
+			background-position: 50% 50%;
+		}
+	  
+		.sound-info {
+			padding: 0 10px 10px 10px;
+
+			audio {
+				width: 100%;
+				background-color: white;
+			}
+		}
+	}
 }
 
 .new-sound a {
