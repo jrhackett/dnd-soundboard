@@ -3,21 +3,20 @@
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
 (($) ->
-  $ ->	$(".sound-picture").height($(".sound-picture").width())
+  $ ->	$(".sound-picture").height($(".sound-picture").width() * 0.7)
 ) jQuery
 
 (($) ->
 	@handleAudioImageClick = (name) ->
 		audiostr = "#" + name + "-audio"
+		playpausestr = "#sound-play-pause-" + name
 		audio = $(audiostr)[0];
 		if audio.paused
 			audio.play()
+			$(playpausestr).removeClass("fa-play")
+			$(playpausestr).addClass("fa-pause")
 		else
 			audio.pause()
+			$(playpausestr).addClass("fa-play")
+			$(playpausestr).removeClass("fa-pause")
 ) jQuery
-
-# TODO figure out why adding this stopPropagation call is causing the delete action to go to the show action instead
-# (($) ->
-# 	$ -> $(".sound-picture .sound-control").on "click", (e) ->
-# 		e.stopPropagation()
-# ) jQuery
