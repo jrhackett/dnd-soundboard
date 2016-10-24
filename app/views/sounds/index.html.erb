@@ -14,7 +14,13 @@
         <audio loop id = "<%= sound.id %>-audio">
           <source src = "<%= sound.soundAttachment.url %>" type = "audio/mp3">
         </audio>
-        <i class="fa fa-play" id = "sound-play-pause-<%= sound.id %>" onClick="handleAudioImageClick('<%= sound.id %>')" aria-hidden="true"></i>
+        <div>
+          <i class="fa fa-play" id = "sound-play-pause-<%= sound.id %>" onClick="handleAudioImageClick('<%= sound.id %>')" aria-hidden="true"></i>
+          <div class = "sound-volume-controls">
+            <i class="fa fa-volume-up" id = "volume-icon-<%= sound.id %>" aria-hidden="true"></i>
+            <input type="range" id="sound-volume-<%= sound.id %>" class = "sound-volume" min="0" value="100" max="100" step="1" oninput="handleVolume('<%= sound.id %>')" onchange="handleVolume('<%= sound.id %>')">
+          </div>
+        </div>
       </div>
       <!-- <p><%= link_to "Download sound file", sound.soundAttachment.url %></p>
       <p><%= link_to "Download image file", sound.imageAttachment.url %></p> -->

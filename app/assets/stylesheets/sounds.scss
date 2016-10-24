@@ -37,6 +37,20 @@
 				width: 100%;
 				background-color: white;
 			}
+
+			i {
+				font-size: 20px;
+			}
+
+			.sound-volume-controls {
+				display: inline-block;
+				float: right;
+			}
+
+			.sound-volume {
+				display: inline-block;
+				width: auto;
+			}
 		}
 	}
 }

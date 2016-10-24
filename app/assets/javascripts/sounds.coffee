@@ -20,3 +20,23 @@
 			$(playpausestr).addClass("fa-play")
 			$(playpausestr).removeClass("fa-pause")
 ) jQuery
+
+(($) ->
+	@handleVolume = (id) ->
+		volume = $("#sound-volume-" + id).val()
+		$("#" + id + "-audio").prop("volume", volume / 100.0)
+		volumeicon = $("#volume-icon-" + id)
+
+		if volume <= 1
+			volumeicon.removeClass("fa-volume-up")
+			volumeicon.removeClass("fa-volume-down")
+			volumeicon.addClass("fa-volume-off")
+		if volume < 40 and volume > 1
+			volumeicon.removeClass("fa-volume-up")
+			volumeicon.removeClass("fa-volume-off")
+			volumeicon.addClass("fa-volume-down")
+		if volume > 75
+			volumeicon.removeClass("fa-volume-down")
+			volumeicon.removeClass("fa-volume-off")
+			volumeicon.addClass("fa-volume-up")
+) jQuery
