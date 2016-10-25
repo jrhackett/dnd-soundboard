@@ -40,3 +40,12 @@
 			volumeicon.removeClass("fa-volume-off")
 			volumeicon.addClass("fa-volume-up")
 ) jQuery
+
+(($) ->
+	@handleUpClick = (id) ->
+		revealcard = $("#sound-card-reveal-" + id)
+		if revealcard.hasClass("toggle")
+			revealcard.removeClass("toggle")
+		else
+			revealcard.addClass("toggle")
+) jQuery
